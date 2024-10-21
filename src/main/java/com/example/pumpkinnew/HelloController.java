@@ -9,16 +9,18 @@ import javafx.scene.input.KeyEvent;
 public class HelloController {
 
     public Button transferButton;
+    public TextField textFieldTarget;
+    public Label textLabel;
     Model model = new Model();
 
     public TextField textField;
 
-    public Label textLabel;
 
     @FXML
     protected void transferButtonAction() {
         model.setUserText(textField.getText());
 
+        textFieldTarget.setText(model.getUserText());
         textLabel.setText(model.getUserText());
     }
 
