@@ -1,4 +1,4 @@
-package com.example.pumpkinnew;
+package com.example.pumpkinnew.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -12,7 +12,8 @@ public class Model {
     }
 
     public void setUserText(String userText) {
-        this.userText.set(userText);
+        if(!userText.isEmpty())
+            this.userText.set(userText);
     }
 
     public StringProperty userTextProperty() {
